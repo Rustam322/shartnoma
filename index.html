@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отправка данных в Telegram</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="app.js" defer></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+    <h1 class="text-xl font-bold text-center mb-4">Отправка данных в Telegram</h1>
+    <form id="dataForm" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 font-medium">Номер приказа</label>
+        <input type="text" id="orderNumber" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium">Дата</label>
+        <input type="date" id="orderDate" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium">ФИО ученика</label>
+        <input type="text" id="studentFullName" class="w-full border border-gray-300 rounded px-3 py-2" required placeholder="Введите Фамилию Имя Отчество">
+      </div>
+      <div>
+        <label  class="block text-gray-700 font-medium">Класс ученика</label>
+        <input placeholder="Класс" type="text" id="studentClass" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium">Причина</label>
+        <textarea placeholder="Причина..." id="reason" class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Отправить</button>
+    </form>
+    <p id="statusMessage" class="text-center text-gray-600 mt-4"></p>
+  </div>
+</body>
+</html>
