@@ -1,0 +1,2 @@
+# shartnoma
+shartnoma uchun
